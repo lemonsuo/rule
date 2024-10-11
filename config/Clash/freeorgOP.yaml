@@ -130,7 +130,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 15: # freejiedian
     <<: *p
-    url: "https://fs.v2rayse.com/share/20240915/wuvsfrbi3q.yaml"
+    url: "https://fs.v2rayse.com/share/20241009/jkie7f8lvp.yaml"
     
 
 proxy-groups:
