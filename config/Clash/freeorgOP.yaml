@@ -78,11 +78,11 @@ proxy-providers:  # Meta支持机场通用订阅
   
   订阅 2: # 项目地址：https://github.com/Ruk1ng001/freeSub
     <<: *p
-    url: "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash_top30.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
   
-  订阅 3: # 项目地址：https://github.com/alex-mikan88/chromego_pure Chromego warp 部分网站无法访问
+  订阅 3: # 项目地址：https://github.com/linzjian666/chromego_extractor
     <<: *p
-    url: "https://raw.githubusercontent.com/alex-mikan88/chromego_pure/main/outputs/clash_meta_warp.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/linzjian666/chromego_extractor/main/outputs/clash_meta_warp.yaml"
  
   订阅 4: # 项目地址：https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
     <<: *p
@@ -90,19 +90,19 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 5: # 项目地址：https://github.com/chengaopan/AutoMergePublicNodes 强解锁
     <<: *p
-    url: "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
+    url: "https://ghp.ci/raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
     
   订阅 6: # 项目地址：https://github.com/ermaozi/get_subscribe
     <<: *p
-    url: "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+    url: "https://ghp.ci/raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
     
   订阅 7: # github free_proxies 项目地址：https://github.com/vxiaov/free_proxies
     <<: *p
-    url: "https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml"
     
   订阅 8: # 项目地址：https://github.com/ripaojiedian/freenode 强解锁
     <<: *p
-    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
+    url: "https://ghp.ci/raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
     
   订阅 9: # Chromego warp
     <<: *p
@@ -110,11 +110,11 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
-    url: "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
 
   订阅 11: # 项目地址：https://github.com/peasoft/NoMoreWalls
     <<: *p
-    url: "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
+    url: "https://ghp.ci/raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
 
   订阅 12: # freeorg
     <<: *p
@@ -126,7 +126,7 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 14: # 
     <<: *p
-    url: "https://raw.githubusercontent.com/Flikify/getNode/main/clash.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/Flikify/getNode/main/clash.yaml"
     
   订阅 15: # freejiedian
     <<: *p
@@ -304,21 +304,21 @@ rule-providers:
   BanAD:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
     path: ./ruleset/BanAD.yaml
     interval: 86400
 
   BanProgramAD:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
     path: ./ruleset/BanProgramAD.yaml
     interval: 86400
 
   BanEasyList:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list"
+    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list"
     path: ./ruleset/BanEasyList.yaml
     interval: 86400
 
@@ -361,7 +361,7 @@ rule-providers:
   ProxyGFWlist:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
     path: ./ruleset/BanEasyList.yaml
     interval: 86400
 
@@ -377,7 +377,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/ChinaDomain.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
     interval: 86400
 
   ChinaCompanyIp:
@@ -385,7 +385,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/ChinaCompanyIp.yaml
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
     interval: 86400
 
   China: 
