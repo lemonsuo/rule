@@ -106,7 +106,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 9: # Chromego warp
     <<: *p
-    url: "https://clash.neobirdfly.eu.org"
+    url: "https://warp.neobirdfly.eu.org"
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
