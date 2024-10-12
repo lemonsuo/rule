@@ -44,13 +44,13 @@ dns:
 ###开始建立锚点
 
 # 自动选择
-fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12, 订阅 13, 订阅 14, 订阅 15, 订阅 16]}
+fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12, 订阅 13, 订阅 14, 订阅 15]}
 
 # 手动切换
-all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12, 订阅 13, 订阅 14, 订阅 15, 订阅 16]}
+all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12, 订阅 13, 订阅 14, 订阅 15]}
 
 # 精选节点
-best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 12, 订阅 13, 订阅 14, 订阅 15, 订阅 16]}
+best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 12, 订阅 13, 订阅 14, 订阅 15]}
 
 # 解锁 AI
 ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 1, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
@@ -76,9 +76,9 @@ proxy-providers:  # Meta支持机场通用订阅
     <<: *p
     url: "https://mxlsub.me/free"
   
-  订阅 2: # 项目地址：https://github.com/Ruk1ng001/freeSub
+  订阅 2: # 项目地址：https://nodefree.githubrowcontent.com
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
+    url: "https://nodefree.githubrowcontent.com/2024/10/20241012.yaml"
   
   订阅 3: # 项目地址：https://github.com/linzjian666/chromego_extractor
     <<: *p
@@ -131,10 +131,6 @@ proxy-providers:  # Meta支持机场通用订阅
   订阅 15: # fs.v2rayse.com
     <<: *p
     url: "https://fs.v2rayse.com/share/20241012/4cq9jk28xt.yaml"
-    
-  订阅 16: # nodefree.githubrowcontent.com
-    <<: *p
-    url: "https://nodefree.githubrowcontent.com/2024/10/20241012.yaml"
     
 
 proxy-groups:
