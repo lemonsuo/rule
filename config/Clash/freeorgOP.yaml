@@ -106,7 +106,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 9: # Chromego warp
     <<: *p
-    url: "https://chromegoclashwarp.marcol.top/"
+    url: "https://warp.neobirdfly.eu.org"
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
@@ -118,7 +118,7 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 12: # freeorg
     <<: *p
-    url: "https://gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/publicvless.yaml"
+    url: "https://ghp.ci/gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/publicvless.yaml"
 
   订阅 13: # 自动获取全网机场试用订阅 aggregator项目 【与订阅 1 有部分重复】 地址：https://linux.do/t/topic/197070#p-1711108-aggregator-6collect-2
     <<: *p
@@ -339,7 +339,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/collection.yaml
-    url: "https://gist.githubusercontent.com/cnfree8964/0864fd1d2e88936a095fb40d74ce4993/raw/collection.yaml"
+    url: "https://ghp.ci/gist.githubusercontent.com/cnfree8964/0864fd1d2e88936a095fb40d74ce4993/raw/collection.yaml"
 
   gfw:
     type: http
