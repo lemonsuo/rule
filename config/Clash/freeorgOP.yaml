@@ -122,7 +122,7 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 13: # 自动获取全网机场试用订阅 aggregator项目 【与订阅 1 有部分重复】 地址：https://linux.do/t/topic/197070#p-1711108-aggregator-6collect-2
     <<: *p
-    url: "https://sub.mxlweb.xyz/aggregatorfull"
+    url: "https://mxlsub.me/aggregator"
 
   订阅 14: # 
     <<: *p
