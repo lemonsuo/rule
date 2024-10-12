@@ -389,7 +389,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/ChinaCompanyIp.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
     interval: 86400
 
   China: 
