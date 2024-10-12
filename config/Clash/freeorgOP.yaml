@@ -130,7 +130,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 15: # fs.v2rayse.com
     <<: *p
-    url: "https://fs.v2rayse.com/share/20241012/un5gg3qcxj.yaml"
+    url: "https://fs.v2rayse.com/share/20241012/4cq9jk28xt.yaml"
     
   订阅 16: # nodefree.githubrowcontent.com
     <<: *p
