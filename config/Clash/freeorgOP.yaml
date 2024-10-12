@@ -106,7 +106,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 9: # Chromego warp
     <<: *p
-    url: "https://ghp.ci//raw.githubusercontent.com/yaney01/chromego/main/sub/merged_warp_proxies_new.yaml"
+    url: "https://chromegoclashwarp.marcol.top/"
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
