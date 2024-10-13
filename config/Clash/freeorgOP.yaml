@@ -118,11 +118,11 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 12: # freeorg
     <<: *p
-    url: "https://ghp.ci/gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/publicvless.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/v2rayclashnodes/clash/v2rayclashnodes_clash0.yaml"
 
   订阅 13: # 
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription3.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/v2rayclashnodes/clash/v2rayclashnodes_clash3.yaml"
 
   订阅 14: # 
     <<: *p
