@@ -122,7 +122,7 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 13: # 
     <<: *p
-    url: "https://raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription3.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription3.yaml"
 
   订阅 14: # 
     <<: *p
