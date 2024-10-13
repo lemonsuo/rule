@@ -72,13 +72,13 @@ p: &p {type: http, interval: 21600, health-check: {enable: true, url: "http://ww
 
 proxy-providers:  # Meta支持机场通用订阅
 
-  订阅 1: # Cloudflare Worker 筛选节点 项目地址：https://linux.do/t/topic/197070#p-1711108-aggregator-6collect-2
+  订阅 1: #
     <<: *p
-    url: "https://mxlsub.me/free"
+    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription1.yaml"
   
   订阅 2: # 项目地址：https://nodefree.githubrowcontent.com
     <<: *p
-    url: "https://nodefree.githubrowcontent.com/2024/10/20241012.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription2.yaml"
   
   订阅 3: # 项目地址：https://github.com/linzjian666/chromego_extractor
     <<: *p
@@ -120,9 +120,9 @@ proxy-providers:  # Meta支持机场通用订阅
     <<: *p
     url: "https://ghp.ci/gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/publicvless.yaml"
 
-  订阅 13: # 自动获取全网机场试用订阅 aggregator项目 【与订阅 1 有部分重复】 地址：https://linux.do/t/topic/197070#p-1711108-aggregator-6collect-2
+  订阅 13: # 
     <<: *p
-    url: "https://mxlsub.me/aggregator"
+    url: "https://raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription3.yaml"
 
   订阅 14: # 
     <<: *p
@@ -130,7 +130,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 15: # fs.v2rayse.com
     <<: *p
-    url: "https://fs.v2rayse.com/share/20241012/4cq9jk28xt.yaml"
+    url: "https://fs.v2rayse.com/share/20241013/ve6nir9vvf.txt"
     
 
 proxy-groups:
