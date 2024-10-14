@@ -66,7 +66,7 @@ BTB: &BTB {type: url-test, url: "https://www.gstatic.com/generate_204", interval
 
 
 # 订阅更新和延迟测试相关
-p: &p {type: http, interval: 3600, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 60, filter: "(?i)^(?!unavailable).*$"}}
+p: &p {type: http, interval: 7200, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 1800, filter: "(?i)^(?!unavailable).*$"}}
 
 ###结束建立锚点
 
