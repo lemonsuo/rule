@@ -76,13 +76,13 @@ proxy-providers:  # Meta支持机场通用订阅
     <<: *p
     url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription1.yaml"
   
-  订阅 2: # 项目地址：https://nodefree.githubrowcontent.com
+  订阅 2: # 项目地址：https://github.com/Ruk1ng001/freeSub
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription2.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml"
   
-  订阅 3: # 项目地址：https://github.com/linzjian666/chromego_extractor
+  订阅 3: # 项目地址：https://github.com/freetcp/chromego_convert
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/linzjian666/chromego_extractor/main/outputs/clash_meta_warp.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/freetcp/chromego_convert/main/outputs/clash_meta_warp.yaml"
  
   订阅 4: # 项目地址：https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
     <<: *p
@@ -106,7 +106,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 9: # Chromego warp
     <<: *p
-    url: "https://clashgithub.com/wp-content/uploads/rss/20241014.yml"
+    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription2.yaml"
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
