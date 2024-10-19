@@ -75,7 +75,7 @@ proxy-providers:  # Meta支持机场通用订阅
   订阅 1: #
     <<: *p
     url: "https://mxlsub.me/free"
-    filter: "^(?!.*(?i)(9.9.9.9)).*$"
+    filter: "^(?!.*(?i)(9\.9\.9\.9|127\.0\.0\.1)).*$"
   
   订阅 2: # 项目地址：https://github.com/Ruk1ng001/freeSub
     <<: *p
@@ -108,7 +108,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 9: # Chromego warp
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription2.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/PangTouY00/Auto_proxy/main/Long_term_subscription1.yaml"
     filter: "(?i)CF|WARP"
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
