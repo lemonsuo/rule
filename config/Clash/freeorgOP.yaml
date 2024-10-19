@@ -264,7 +264,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/ai.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/MadisonWirtanen/WARP-Clash-with-ZJU-Rules/main/ai.yaml"
+    url: "https://cdn.jsdelivr.net/gh/MadisonWirtanen/WARP-Clash-with-ZJU-Rules@main/ai.yaml"
     interval: 86400
     
   Gemini: 
@@ -272,7 +272,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/Gemini.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Gemini.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Gemini.yaml"
     interval: 86400
 
   Claude: 
@@ -280,7 +280,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/Claude.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Claude.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Claude.yaml"
     interval: 86400
 
 # 广告类
@@ -289,7 +289,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/AdBlock.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/AdBlock.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/AdBlock.yaml"
     interval: 86400
     
   BanAD:
@@ -316,7 +316,7 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
 
@@ -331,21 +331,21 @@ rule-providers:
   gfw:
     type: http
     behavior: domain
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
     path: ./ruleset/gfw.yaml
     interval: 86400
 
   proxy:
     type: http
     behavior: domain
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
     path: ./ruleset/proxy.yaml
     interval: 86400
 
   tld-not-cn:
     type: http
     behavior: domain
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
 
@@ -361,7 +361,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/ProxyClient.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/ProxyClient.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/ProxyClient.yaml"
 
   ChinaDomain:
     type: http
@@ -384,20 +384,20 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/China.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/China.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/China.yaml"
     interval: 86400
 
   cncidr:
     type: http
     behavior: ipcidr
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     interval: 86400
 
   lancidr:
     type: http
     behavior: ipcidr
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
@@ -405,7 +405,7 @@ rule-providers:
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://ghp.ci/raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
@@ -414,7 +414,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/PayPal.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/PayPal.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PayPal.yaml"
     interval: 86400
 
   TikTok: 
@@ -422,7 +422,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/TikTok.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/TikTok.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/TikTok.yaml"
     interval: 86400
 
   IDM: 
@@ -430,7 +430,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/IDM.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/IDM.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/IDM.yaml"
 
 # 流媒体
   Amazon: 
@@ -438,7 +438,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/Amazon.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Amazon.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Amazon.yaml"
     interval: 86400
 
   Netflix: 
@@ -446,7 +446,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/Netflix.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Netflix.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netflix.yaml"
     interval: 86400
 
   Spotify: 
@@ -454,7 +454,7 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/Spotify.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Spotify.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml"
     interval: 86400
     
   DisneyPlus: 
@@ -462,21 +462,21 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/DisneyPlus.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/DisneyPlus.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/DisneyPlus.yaml"
     
   Hulu: 
     type: http
     behavior: classical
     format: yaml
     path: ./rules/Hulu.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Hulu.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Hulu.yaml"
 
   HBO: 
     type: http
     behavior: classical
     format: yaml
     path: ./rules/HBO.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/HBO.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/HBO.yaml"
 
 # 游戏类
   Steam: 
@@ -484,5 +484,5 @@ rule-providers:
     behavior: classical
     format: yaml
     path: ./rules/Steam.yaml
-    url: "https://ghp.ci/raw.githubusercontent.com/zuluion/Clash-Template-Config/master/Filter/Steam.yaml"
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Steam.yaml"
     interval: 86400
