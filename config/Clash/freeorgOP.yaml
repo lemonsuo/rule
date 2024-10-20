@@ -44,29 +44,28 @@ dns:
 ###开始建立锚点
 
 # 自动选择
-fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+fly: &fly {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
 
 # 手动切换
 all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
 
 # 精选节点
-best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 6, 订阅 12]}
+best: &best {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 6, 订阅 12]}
 
 # 解锁 AI
-ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 1, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
+ai: &ai {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 1, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
 
 # 解锁节点
-node: &node {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 7, 订阅 9]}
+node: &node {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 7, 订阅 9]}
 
 # 备用应急
-backup: &backup {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 3, 订阅 11, 订阅 12]}
+backup: &backup {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 3, 订阅 11, 订阅 12]}
 
 # 突破限制
-BTB: &BTB {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 3, 订阅 2]}
+BTB: &BTB {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 3, 订阅 2]}
 
 # 订阅更新和延迟测试相关
-p: &p {type: http, interval: 7200, health-check: {enable: true, url: "http://www.google.com/generate_204", interval: 1800, filter: "(?i)^(?!unavailable).*$"}}
-
+p: &p {type: http, interval: 3600, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 60, filter: "(?i)^(?!unavailable).*$"}}
 ###结束建立锚点
 
 proxy-providers:  # Meta支持机场通用订阅
@@ -119,6 +118,7 @@ proxy-providers:  # Meta支持机场通用订阅
     <<: *p
     url: "https://ghp.ci/raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/v2rayclashnodes/clash/v2rayclashnodes_clash3.yaml"
 
+FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
 proxy-groups:
 
