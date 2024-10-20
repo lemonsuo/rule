@@ -43,29 +43,8 @@ dns:
 
 ###开始建立锚点
 
-# 自动选择
-fly: &fly {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
-
-# 手动切换
-all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
-
-# 精选节点
-best: &best {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 6, 订阅 12]}
-
-# 解锁 AI
-ai: &ai {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 1, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
-
-# 解锁节点
-node: &node {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 7, 订阅 9]}
-
-# 备用应急
-backup: &backup {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 3, 订阅 11, 订阅 12]}
-
-# 突破限制
-BTB: &BTB {type: url-test, url: "https://www.gstatic.com/generate_204", interval: 60, tolerance: 20, lazy: true, disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true, use: [订阅 3, 订阅 2]}
-
 # 订阅更新和延迟测试相关
-p: &p {type: http, interval: 3600, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 60, filter: "(?i)^(?!unavailable).*$"}}
+p: &p {type: http, interval: 3600, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 300, filter: "(?i)^(?!unavailable).*$"}}
 ###结束建立锚点
 
 proxy-providers:  # Meta支持机场通用订阅
@@ -103,8 +82,7 @@ proxy-providers:  # Meta支持机场通用订阅
     
   订阅 9: # Chromego warp
     <<: *p
-    url: "https://subs.zeabur.app/clash"
-    filter: "(?i)CF|WARP"
+    url: "http://allsub.king361.cf"
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
@@ -118,35 +96,51 @@ proxy-providers:  # Meta支持机场通用订阅
     <<: *p
     url: "https://ghp.ci/raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/v2rayclashnodes/clash/v2rayclashnodes_clash3.yaml"
 
+
+# 锚点 - 时延优选参数 [每 1 分钟一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+c: &c {interval: 300, tolerance: 20, lazy: true, url: 'https://www.gstatic.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false}
+
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
-proxy-groups:
-
-# 功能分组
-  
+# 策略组
+proxy-groups:  
   - name: 🌏️ 节点选择
     type: select
     proxies:
-      - ⬇ 精选节点
+      - 🔮 负载均衡
       - 🚀 自动选择
       - 🔄 手动切换
-      - 🔀 AI 服务
+      - ⬇ 精选节点
+      - 🤖 AI 服务
       - ⬇ 解锁节点
       - ⬇ 备用应急
       - DIRECT
 
   - name: ⬇ 精选节点
-    <<: *best
+    type: url-test
+    <<: *c
+    use: [订阅 1, 订阅 2, 订阅 4, 订阅 6, 订阅 12]
+    filter: "(?i)^(?!unavailable).*$"
 
-  - name: 🚀 自动选择
-    <<: *fly
+  - name: 🔄 手动切换
+    include-all-providers: true
+    type: select
+    <<: *c
     filter: "(?i)^(?!unavailable).*$"
     
-  - name: 🔄 手动切换
-    <<: *all
+  - name: 🔮 负载均衡
+    type: load-balance
+    include-all-providers: true
+    <<: *c
     filter: "(?i)^(?!unavailable).*$"
 
-  - name: 🔀 AI 服务
+  - name: ♻️ 自动选择
+    include-all-providers: true
+    type: url-test
+    <<: *c
+    filter: "(?i)^(?!unavailable).*$"
+
+  - name: 🤖 AI 服务
     type: select
     proxies:
       - ✅ 解锁 AI
@@ -154,14 +148,22 @@ proxy-groups:
       - 🔄 手动切换
 
   - name: ⬇ 解锁节点
-    <<: *node 
+    type: url-test
+    <<: *c
+    use: [订阅 7, 订阅 9]
+    filter: "(?i)^(?!unavailable).*$"
 
   - name: ⬇ 备用应急
-    <<: *backup
+    type: url-test
+    <<: *c
+    use: [订阅 3, 订阅 11, 订阅 12]
     filter: "(?i)^(?!unavailable).*$"
 
   - name: ✅ 解锁 AI
-    <<: *ai
+    type: url-test
+    <<: *c
+    use: [订阅 1, 订阅 7]
+    filter: "(?!.*(hong kong|hk|香港|香|港|hk😈|unavailable))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"
 
   - name: ⛔️ 拦截广告
     type: select
@@ -169,54 +171,53 @@ proxy-groups:
       - "DIRECT"
       - "REJECT"
 
-  - name: ↪️ 漏网之鱼
+  - name: 🐟 漏网之鱼
     type: select
     proxies:
       - 🌏️ 节点选择
       - DIRECT
-
 # 规则
 rules:
-
+  - DST-PORT,6881-6889,DIRECT   # P2P(BT)流量端口
 # 解锁AI
-  - RULE-SET,ai,🔀 AI 服务
-  - RULE-SET,Gemini,🔀 AI 服务
-  - RULE-SET,Claude,🔀 AI 服务
-  - DOMAIN,meta.ai,🔀 AI 服务
-  - DOMAIN,claude.ai,🔀 AI 服务
+  - RULE-SET,ai,🤖 AI 服务
+  - RULE-SET,Gemini,🤖 AI 服务
+  - RULE-SET,Claude,🤖 AI 服务
+  - DOMAIN,meta.ai,🤖 AI 服务
+  - DOMAIN,claude.ai,🤖 AI 服务
   - DOMAIN,groq.com,⬇ 精选节点
-  - DOMAIN-SUFFIX,console.anthropic.com,🔀 AI 服务
-  - DOMAIN,anthropic.com,🔀 AI 服务
-  - DOMAIN,claude.ai,🔀 AI 服务
-  - DOMAIN,console.anthropic.com,🔀 AI 服务
-  - DOMAIN,anthropic.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,aistudio.google.com,🔀 AI 服务
-  - DOMAIN,browser-intake-datadoghq.com,🔀 AI 服务
-  - DOMAIN,static.cloudflareinsights.com,🔀 AI 服务
-  - DOMAIN,ai-pro.org,🔀 AI 服务
-  - DOMAIN-SUFFIX,ai.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,algolia.net,🔀 AI 服务
-  - DOMAIN-SUFFIX,api.statsig.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,auth0.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,chatgpt.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,chatgpt.livekit.cloud,🔀 AI 服务
-  - DOMAIN-SUFFIX,client-api.arkoselabs.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,events.statsigapi.net,🔀 AI 服务
-  - DOMAIN-SUFFIX,featuregates.org,🔀 AI 服务
-  - DOMAIN-SUFFIX,host.livekit.cloud,🔀 AI 服务
-  - DOMAIN-SUFFIX,identrust.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,intercom.io,🔀 AI 服务
-  - DOMAIN-SUFFIX,intercomcdn.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,launchdarkly.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,oaistatic.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,oaiusercontent.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,observeit.net,🔀 AI 服务
-  - DOMAIN-SUFFIX,poe.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,segment.io,🔀 AI 服务
-  - DOMAIN-SUFFIX,sentry.io,🔀 AI 服务
-  - DOMAIN-SUFFIX,stripe.com,🔀 AI 服务
-  - DOMAIN-SUFFIX,turn.livekit.cloud,🔀 AI 服务
-  - DOMAIN-KEYWORD,openai,🔀 AI 服务
+  - DOMAIN-SUFFIX,console.anthropic.com,🤖 AI 服务
+  - DOMAIN,anthropic.com,🤖 AI 服务
+  - DOMAIN,claude.ai,🤖 AI 服务
+  - DOMAIN,console.anthropic.com,🤖 AI 服务
+  - DOMAIN,anthropic.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,aistudio.google.com,🤖 AI 服务
+  - DOMAIN,browser-intake-datadoghq.com,🤖 AI 服务
+  - DOMAIN,static.cloudflareinsights.com,🤖 AI 服务
+  - DOMAIN,ai-pro.org,🤖 AI 服务
+  - DOMAIN-SUFFIX,ai.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,algolia.net,🤖 AI 服务
+  - DOMAIN-SUFFIX,api.statsig.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,auth0.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud,🤖 AI 服务
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,events.statsigapi.net,🤖 AI 服务
+  - DOMAIN-SUFFIX,featuregates.org,🤖 AI 服务
+  - DOMAIN-SUFFIX,host.livekit.cloud,🤖 AI 服务
+  - DOMAIN-SUFFIX,identrust.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,intercom.io,🤖 AI 服务
+  - DOMAIN-SUFFIX,intercomcdn.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,launchdarkly.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,oaistatic.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,observeit.net,🤖 AI 服务
+  - DOMAIN-SUFFIX,poe.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,segment.io,🤖 AI 服务
+  - DOMAIN-SUFFIX,sentry.io,🤖 AI 服务
+  - DOMAIN-SUFFIX,stripe.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,turn.livekit.cloud,🤖 AI 服务
+  - DOMAIN-KEYWORD,openai,🤖 AI 服务
 
 # 服务类
   - RULE-SET,TikTok,⬇ 解锁节点
@@ -224,7 +225,6 @@ rules:
   - RULE-SET,telegramcidr,🌏️ 节点选择
   - DOMAIN-KEYWORD,oaifree,DIRECT
   - DOMAIN-SUFFIX,shared.oaifree.com,DIRECT
-  
 
 # 屏蔽广告
   - RULE-SET,AdBlock,⛔️ 拦截广告
@@ -250,10 +250,14 @@ rules:
   - GEOIP,CN,DIRECT,no-resolve
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,geolocation-!cn,🌏️ 节点选择
-  - MATCH,↪️ 漏网之鱼
+  - MATCH,🐟 漏网之鱼
 
+  - RULE-SET,github_domain,🌏️ 节点选择
+rule-anchor:
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
 rule-providers:
-
+  github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs" }
 # AI 类
   ai:
     type: http
