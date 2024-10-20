@@ -44,10 +44,10 @@ dns:
 ###开始建立锚点
 
 # 自动选择
-fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
 
 # 手动切换
-all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
 
 # 精选节点
 best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 6, 订阅 12]}
@@ -88,10 +88,6 @@ proxy-providers:  # Meta支持机场通用订阅
   订阅 4: # 项目地址：https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
     <<: *p
     url: "https://www.xrayvip.com/free.yaml"
-    
-  订阅 5: # 项目地址：https://github.com/chengaopan/AutoMergePublicNodes 强解锁
-    <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
     
   订阅 6: # 项目地址：https://github.com/ermaozi/get_subscribe
     <<: *p
