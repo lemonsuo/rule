@@ -108,7 +108,7 @@ proxy-groups:
     type: select
     proxies:
       - 🔮 负载均衡
-      - 🚀 自动选择
+      - ♻️ 自动选择
       - 🔄 手动切换
       - ⬇ 精选节点
       - 🤖 AI 服务
