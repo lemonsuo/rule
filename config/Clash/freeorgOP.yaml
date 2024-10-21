@@ -86,7 +86,7 @@ proxy-providers:  # Meta支持机场通用订阅
 
   订阅 10: # 项目地址：https://github.com/snakem982/proxypool
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
+    url: "https://ghp.ci/raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml"
 
   订阅 11: # freeorg
     <<: *p
