@@ -49,13 +49,14 @@ p: &p {type: http, interval: 3600, health-check: {enable: true, url: "https://ww
 
 proxy-providers:  # Meta支持机场通用订阅
 
-  # 订阅 1: # 项目地址：
-  #   <<: *p
-  #   url: "https://mxlsub.me/new"
-  #   filter: "^(?!.*(?i)(订阅|更新|mxlsub)).*$"
-  订阅 1: # 项目地址：https://github.com/snakem982/proxypool
+  订阅 1: # 项目地址：
     <<: *p
-    url: "https://ghp.ci/raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml"
+    url: "https://mxlsub.me/new"
+    filter: "^(?!.*(?i)(订阅|更新|mxlsub)).*$"
+
+  # 订阅 1: # 项目地址：https://github.com/snakem982/proxypool
+  #   <<: *p
+  #   url: "https://ghp.ci/raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml"
 
   订阅 2: # 
     <<: *p
@@ -100,6 +101,8 @@ proxy-providers:  # Meta支持机场通用订阅
 c: &c {interval: 300, tolerance: 20, lazy: true, url: 'https://www.gstatic.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false}
 
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+FilterHTJSK: &FilterHTJSK '^(?=.*(.))(?!.*((?i)广港|广台|广日|广新|广韩|广美|香港|HK|Hong Kong|🇭🇰|HongKong|台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)).*$'
+FilterTJSK: &FilterTJSK '^(?=.*(.))(?!.*((?i)广台|广日|广新|广韩|广美|台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)).*$'
 
 # 策略组
 proxy-groups:  
@@ -114,6 +117,7 @@ proxy-groups:
       - ⬇ 解锁节点
       - ⬇ 备用应急
       - DIRECT
+    filter: *FilterAll
 
   - name: ⬇ 精选节点
     type: url-test
@@ -138,6 +142,18 @@ proxy-groups:
     type: url-test
     <<: *c
     filter: "(?i)^(?!unavailable).*$"
+
+  - name: htjsk 港台日新韩
+    type: select
+    include-all-providers: true
+    <<: *c
+    filter: *FilterHTJSK
+
+  - name: tjsk 台日新韩
+    type: select
+    include-all-providers: true
+    <<: *c
+    filter: *FilterTJSK
 
   - name: 🤖 AI 服务
     type: select
@@ -251,7 +267,7 @@ rules:
   - GEOSITE,geolocation-!cn,🌏️ 节点选择
   - MATCH,🐟 漏网之鱼
 
-  - RULE-SET,github_domain,🌏️ 节点选择
+  - RULE-SET,github_domain,htjsk 港台日新韩
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
