@@ -1,106 +1,128 @@
 proxies:
-  - name: CA-vmess-23.162.200.227:443
+  - name: CA-vmess-russia.com:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: russia.com
+    sni: ip18.6929198.xyz
+    type: vmess
+    udp: true
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        host: ip18.6929198.xyz
+      path: /github.com/Alvin9999
+  - name: CA-vmess-russia.com:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: russia.com
+    sni: ip18.6929198.xyz
+    type: vmess
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        host: ip18.6929198.xyz
+      path: /github.com/Alvin9999
+  - name: DE-vmess-23.157.88.6:443
+    alterId: 1
     cipher: auto
     network: ws
     port: 443
-    server: 23.162.200.227
+    server: 23.157.88.6
+    servername: 23.157.88.6
     tfo: false
     tls: true
     type: vmess
     uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
     ws-opts:
       headers:
-        Host: 23.162.200.227
-      path: /linkvws
-  - name: CA-vmess-japan.com:2082
+        Host: 23.157.88.6
+      path: linkvws
+  - name: DE-vmess-23.158.56.39:443
+    alterId: 1
     cipher: auto
     network: ws
-    port: 2082
-    server: japan.com
-    skip-cert-verify: true
-    tls: false
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-headers:
-      Host: ip16.6929198.xyz
-    ws-path: /github.com/Alvin9999
-  - name: HK-vmess-1.65.205.116:30251
-    cipher: auto
-    port: 30251
-    server: 1.65.205.116
+    port: 443
+    server: 23.158.56.39
     tfo: false
-    tls: false
+    tls: true
     type: vmess
-    uuid: 9e88a10b-655c-5120-89d0-408634169561
-  - name: HK-vmess-143.92.42.65:2902
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 23.158.56.39
+      path: linkvws
+  - name: FR-vmess-162.19.25.207:44513
     cipher: auto
-    port: 2902
-    server: 143.92.42.65
-    tfo: false
-    tls: false
+    network: tcp
+    port: 44513
+    server: 162.19.25.207
     type: vmess
-    uuid: 640c1077-d10b-4225-a9fb-d3e9c3ce7a00
-  - name: HK-vmess-38.147.189.182:13245
+    uuid: 4552bdb6-e008-43ac-926d-c6c6c5a6fc76
+  - name: FR-vmess-23.162.152.177:443
+    alterId: 1
     cipher: auto
-    port: 13245
-    server: 38.147.189.182
+    network: ws
+    port: 443
+    server: 23.162.152.177
     tfo: false
-    tls: false
+    tls: true
     type: vmess
-    uuid: 74d541c4-4395-4852-83e8-3f5e44d10c93
-  - name: HK-vmess-hkt2.bika.hk:30251
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 23.162.152.177
+      path: linkvws
+  - name: GB-vmess-149.7.16.194:443
+    alterId: 1
     cipher: auto
-    port: 30251
-    server: hkt2.bika.hk
+    network: ws
+    port: 443
+    server: 149.7.16.194
     tfo: false
-    tls: false
+    tls: true
     type: vmess
-    uuid: 9e88a10b-655c-5120-89d0-408634169561
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 149.7.16.194
+      path: /linkvws
   - name: IR-vmess-193.151.144.26:2083
     cipher: auto
     network: ws
     port: 2083
     server: 193.151.144.26
     type: vmess
+    udp: true
     uuid: 7b33bc8f-7014-4814-afb1-1c4d7f25314c
     ws-opts:
       headers:
         host: tv.filmnet.ir
       path: /
-  - name: KR-vmess-45.94.68.210:24463
+  - name: IT-vmess-f41.maryam1500.top:2098
     cipher: auto
-    port: 24463
-    server: 45.94.68.210
-    tfo: false
-    tls: false
+    http-opts: {}
+    network: http
+    port: 2098
+    server: f41.maryam1500.top
+    sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
     type: vmess
-    uuid: be4d5bca-0551-4a51-a965-25eaba7ac811
-  - name: TR-vmess-202.78.162.5:443
-    cipher: auto
-    network: ws
-    port: 443
-    server: 202.78.162.5
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6
-    ws-opts:
-      headers:
-        Host: sahand.serveminecraft.net
-      path: /
-  - name: TR-vmess-202.78.162.5:443
+    udp: true
+    uuid: 83876222-64a4-4912-aa18-b7d9d34959de
+  - name: RU-vmess-185.221.160.163:443
     cipher: auto
     network: ws
     port: 443
-    server: 202.78.162.5
+    server: 185.221.160.163
     tfo: false
     tls: true
     type: vmess
-    uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
     ws-opts:
       headers:
-        Host: irsoft.sytes.net
-      path: /
+        Host: worker-mute-bar-1719.nifotok993.workers.dev
+      path: /glweidf.cfd/linkws
   - name: TR-vmess-202.78.162.5:443
     cipher: auto
     network: ws
@@ -114,11 +136,50 @@ proxies:
       headers:
         Host: pendar.onthewifi.com
       path: /
-  - name: US-vmess-104.19.21.63:2095
+  - name: US-vmess-104.16.60.8:2086
+    cipher: auto
+    network: ws
+    port: 2086
+    server: 104.16.60.8
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    ws-opts:
+      headers:
+        Host: 1c11-muddy-rice-1c11.vetanex501.workers.dev
+      path: /glweidf.sbs/linkws
+  - name: US-vmess-104.16.67.38:2052
+    cipher: auto
+    network: ws
+    port: 2052
+    server: 104.16.67.38
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    ws-opts:
+      headers:
+        Host: worker-lingering-fog-c021.gesofog870.workers.dev
+      path: /linde06.indiavideo.sbs/linkws
+  - name: US-vmess-104.16.68.38:2086
+    cipher: auto
+    network: ws
+    port: 2086
+    server: 104.16.68.38
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
+    ws-opts:
+      headers:
+        Host: 7hss-butterfly-d4c3.fijetem432.workers.dev
+      path: /afrhms07.xfixedfloat.cfd/linkws
+  - name: US-vmess-104.18.57.111:2095
     cipher: auto
     network: ws
     port: 2095
-    server: 104.19.21.63
+    server: 104.18.57.111
     tfo: false
     tls: false
     type: vmess
@@ -127,146 +188,123 @@ proxies:
       headers:
         Host: ip2.6016725.xyz
       path: github.com/Alvin9999
-  - name: US-vmess-104.19.45.123:2095
+  - name: US-vmess-104.19.21.71:2082
     cipher: auto
     network: ws
-    port: 2095
-    server: 104.19.45.123
+    port: 2082
+    server: 104.19.21.71
     tfo: false
     tls: false
     type: vmess
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
     ws-opts:
       headers:
-        Host: onea.flha.ru
+        Host: ip3.6929198.xyz
+      path: github.com/Alvin9999
+  - name: US-vmess-104.19.45.90:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: 104.19.45.90
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        Host: ip3.6929198.xyz
+      path: github.com/Alvin9999
+  - name: US-vmess-104.19.47.65:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: 104.19.47.65
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        Host: ip3.6929198.xyz
+      path: github.com/Alvin9999
+  - name: US-vmess-104.19.57.4:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: 104.19.57.4
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        Host: ip3.6929198.xyz
+      path: github.com/Alvin9999
+  - name: US-vmess-104.19.57.4:2095
+    cipher: auto
+    network: ws
+    port: 2095
+    server: 104.19.57.4
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    ws-opts:
+      headers:
+        Host: ip2.6016725.xyz
+      path: github.com/Alvin9999
+  - name: US-vmess-104.20.25.146:2095
+    cipher: auto
+    network: ws
+    port: 2095
+    server: 104.20.25.146
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    ws-opts:
+      headers:
+        Host: ip2.6016725.xyz
+      path: github.com/Alvin9999
+  - name: US-vmess-104.21.8.157:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: 104.21.8.157
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    ws-opts:
+      headers:
+        Host: s1c.v2.v001sss.xyz
       path: /
-  - name: US-vmess-104.19.45.31:2095
+  - name: US-vmess-142.4.108.139:38007
+    alterId: 64
     cipher: auto
     network: ws
-    port: 2095
-    server: 104.19.45.31
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
-    ws-opts:
-      headers:
-        Host: ip2.6016725.xyz
-      path: github.com/Alvin9999
-  - name: US-vmess-104.19.45.47:2095
-    cipher: auto
-    network: ws
-    port: 2095
-    server: 104.19.45.47
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
-    ws-opts:
-      headers:
-        Host: ip2.6016725.xyz
-      path: github.com/Alvin9999
-  - name: US-vmess-104.19.45.50:2082
-    cipher: auto
-    network: ws
-    port: 2082
-    server: 104.19.45.50
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        Host: ip3.6929198.xyz
-      path: github.com/Alvin9999
-  - name: US-vmess-104.19.58.175:2082
-    cipher: auto
-    network: ws
-    port: 2082
-    server: 104.19.58.175
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        Host: ip3.6929198.xyz
-      path: github.com/Alvin9999
-  - name: US-vmess-104.21.18.227:443
-    cipher: auto
-    network: ws
-    port: 443
-    server: 104.21.18.227
+    port: 38007
+    server: 142.4.108.139
     tfo: false
     tls: true
     type: vmess
-    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     ws-opts:
       headers:
-        Host: jahfkjha.cfd
-      path: /linkws
-  - name: US-vmess-104.21.238.101:2095
-    cipher: auto
-    network: ws
-    port: 2095
-    server: 104.21.238.101
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
-    ws-opts:
-      headers:
-        Host: ip3.6016725.xyz
-      path: github.com/Alvin9999
-  - name: US-vmess-104.21.82.183:8880
-    cipher: auto
-    network: ws
-    port: 8880
-    server: 104.21.82.183
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
-    ws-opts:
-      headers:
-        Host: server26.beheshtbaneh.com
-      path: /
-  - name: US-vmess-104.26.5.66:2082
-    cipher: auto
-    network: ws
-    port: 2082
-    server: 104.26.5.66
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        Host: ip3.6929198.xyz
-      path: github.com/Alvin9999
-  - name: US-vmess-104.26.7.132:2082
-    cipher: auto
-    network: ws
-    port: 2082
-    server: 104.26.7.132
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        Host: ip3.6929198.xyz
-      path: github.com/Alvin9999
+        Host: 142.4.108.139
+      path: /path/021101252414
   - name: US-vmess-151.101.2.133:80
     cipher: auto
     network: ws
     port: 80
     server: 151.101.2.133
+    tfo: false
+    tls: false
     type: vmess
     uuid: a888b89a-08ac-40e6-8ad7-cfce9569f967
     ws-opts:
       headers:
-        host: gerMAnyISvP.iR
+        Host: gerMAnyISvP.iR
       path: /racevpn
   - name: US-vmess-162.159.136.98:80
     cipher: auto
@@ -274,24 +312,12 @@ proxies:
     port: 80
     server: 162.159.136.98
     type: vmess
+    udp: true
     uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
     ws-opts:
       headers:
         host: rn2.hostmjj.com
       path: /
-  - name: US-vmess-162.159.140.19:2082
-    cipher: auto
-    network: ws
-    port: 2082
-    server: 162.159.140.19
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        Host: ip3.6929198.xyz
-      path: github.com/Alvin9999
   - name: US-vmess-162.159.140.33:2095
     cipher: auto
     network: ws
@@ -305,11 +331,11 @@ proxies:
       headers:
         Host: ip2.6016725.xyz
       path: github.com/Alvin9999
-  - name: US-vmess-162.159.140.77:2082
+  - name: US-vmess-162.159.140.56:2082
     cipher: auto
     network: ws
     port: 2082
-    server: 162.159.140.77
+    server: 162.159.140.56
     tfo: false
     tls: false
     type: vmess
@@ -318,11 +344,24 @@ proxies:
       headers:
         Host: ip3.6929198.xyz
       path: github.com/Alvin9999
-  - name: US-vmess-172.64.166.8:2095
+  - name: US-vmess-162.159.140.56:2095
     cipher: auto
     network: ws
     port: 2095
-    server: 172.64.166.8
+    server: 162.159.140.56
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    ws-opts:
+      headers:
+        Host: ip2.6016725.xyz
+      path: /
+  - name: US-vmess-172.64.166.16:2095
+    cipher: auto
+    network: ws
+    port: 2095
+    server: 172.64.166.16
     tfo: false
     tls: false
     type: vmess
@@ -331,16 +370,104 @@ proxies:
       headers:
         Host: ip2.6016725.xyz
       path: github.com/Alvin9999
-  - name: US-vmess-172.64.167.8:2095
+  - name: US-vmess-172.64.166.2:2082
     cipher: auto
     network: ws
-    port: 2095
-    server: 172.64.167.8
+    port: 2082
+    server: 172.64.166.2
+    sni: ip18.6929198.xyz
+    type: vmess
+    udp: true
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        host: ip18.6929198.xyz
+      path: /github.com/Alvin9999
+  - name: US-vmess-172.64.167.19:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: 172.64.167.19
     tfo: false
     tls: false
     type: vmess
-    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
     ws-opts:
       headers:
-        Host: ip2.6016725.xyz
+        Host: ip3.6929198.xyz
       path: github.com/Alvin9999
+  - name: US-vmess-188.114.97.21:443
+    cipher: auto
+    network: ws
+    port: 443
+    server: 188.114.97.21
+    tfo: false
+    tls: true
+    type: vmess
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    ws-opts:
+      headers:
+        Host: afrhms16v.bestxray.buzz
+      path: /linkws
+  - name: US-vmess-198.2.218.100:41400
+    alterId: 64
+    cipher: auto
+    port: 41400
+    server: 198.2.218.100
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - name: US-vmess-38.91.106.227:443
+    cipher: auto
+    network: ws
+    port: 443
+    server: 38.91.106.227
+    tfo: false
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+      path: /linkvws
+  - name: US-vmess-d.jembat.homes:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: d.jembat.homes
+    tfo: false
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: d.jembat.homes
+      path: /
+  - name: US-vmess-p.valkinin.org:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: p.valkinin.org
+    tfo: false
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: p.valkinin.org
+      path: linkvws
+  - name: US-vmess-russia.com:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: russia.com
+    sni: ip18.6929198.xyz
+    type: vmess
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        host: ip18.6929198.xyz
+      path: /github.com/Alvin9999
