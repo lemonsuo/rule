@@ -20,7 +20,6 @@ proxies:
     skip-cert-verify: true
     tls: false
     type: vmess
-    udp: true
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
     ws-headers:
       Host: ip16.6929198.xyz
@@ -63,7 +62,6 @@ proxies:
     port: 2083
     server: 193.151.144.26
     type: vmess
-    udp: true
     uuid: 7b33bc8f-7014-4814-afb1-1c4d7f25314c
     ws-opts:
       headers:
@@ -276,7 +274,6 @@ proxies:
     port: 80
     server: 162.159.136.98
     type: vmess
-    udp: true
     uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
     ws-opts:
       headers:
