@@ -1,10 +1,81 @@
 proxies:
+  - name: CA-vmess-d.jembat.homes:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: d.jembat.homes
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: d.jembat.homes
+      path: /
+  - name: CA-vmess-p.valkinin.org:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: p.valkinin.org
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: p.valkinin.org
+      path: linkvws
+  - name: CA-vmess-russia.com:2082
+    cipher: auto
+    network: ws
+    port: 2082
+    server: russia.com
+    sni: ip18.6929198.xyz
+    type: vmess
+    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+    ws-opts:
+      headers:
+        host: ip18.6929198.xyz
+      path: /github.com/Alvin9999
   - name: DE-trojan-18.198.161.189:22222
     password: telegram-id-privatevpns
     port: 22222
     server: 18.198.161.189
     sni: trojan.burgerip.co.uk
     type: trojan
+  - name: DE-vmess-23.157.88.6:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: 23.157.88.6
+    servername: 23.157.88.6
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 23.157.88.6
+      path: linkvws
+  - name: DE-vmess-23.158.56.39:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: 23.158.56.39
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 23.158.56.39
+      path: linkvws
+  - name: ES-ss-150.241.95.62:36792
+    cipher: chacha20-ietf-poly1305
+    password: F%&MysMUY8
+    port: 36792
+    server: 150.241.95.62
+    type: ss
   - name: FR-trojan-13.36.247.155:22222
     password: telegram-id-privatevpns
     port: 22222
@@ -20,7 +91,6 @@ proxies:
     server: 13.37.24.49
     sni: trojan.burgerip.co.uk
     type: trojan
-    udp: true
   - name: FR-trojan-51.44.40.40:22222
     alpn:
       - http/1.1
@@ -30,17 +100,134 @@ proxies:
     server: 51.44.40.40
     sni: trojan.burgerip.co.uk
     type: trojan
+  - name: FR-vmess-162.19.25.207:44513
+    cipher: auto
+    network: tcp
+    port: 44513
+    server: 162.19.25.207
+    type: vmess
+    uuid: 4552bdb6-e008-43ac-926d-c6c6c5a6fc76
+  - name: FR-vmess-23.162.152.177:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: 23.162.152.177
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 23.162.152.177
+      path: linkvws
+  - name: GB-ss-212.102.53.198:443
+    cipher: aes-128-gcm
+    password: shadowsocks
+    port: 443
+    server: 212.102.53.198
+    type: ss
+  - name: GB-trojan-3.11.27.8:22222
+    password: telegram-id-privatevpns
+    port: 22222
+    server: 3.11.27.8
+    sni: trojan.burgerip.co.uk
+    type: trojan
   - name: GB-trojan-51.24.9.162:22222
     password: telegram-id-privatevpns
     port: 22222
     server: 51.24.9.162
     sni: trojan.burgerip.co.uk
     type: trojan
+  - name: GB-vmess-149.7.16.194:443
+    alterId: 1
+    cipher: auto
+    network: ws
+    port: 443
+    server: 149.7.16.194
+    tls: true
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    ws-opts:
+      headers:
+        Host: 149.7.16.194
+      path: /linkvws
+  - name: HK-ss-iepl5.forlive.live:50118
+    cipher: chacha20-ietf-poly1305
+    password: 25cb8cd7-800f-359e-81b5-a12863e2018d
+    port: 50118
+    server: iepl5.forlive.live
+    type: ss
+  - name: HK-vmess-1.65.205.116:30251
+    cipher: auto
+    port: 30251
+    server: 1.65.205.116
+    tls: false
+    type: vmess
+    uuid: 9e88a10b-655c-5120-89d0-408634169561
+  - name: HK-vmess-143.92.42.65:2902
+    cipher: auto
+    port: 2902
+    server: 143.92.42.65
+    tls: false
+    type: vmess
+    uuid: 640c1077-d10b-4225-a9fb-d3e9c3ce7a00
+  - name: HK-vmess-38.147.188.137:54037
+    cipher: auto
+    port: 54037
+    server: 38.147.188.137
+    tls: false
+    type: vmess
+    uuid: 01c2c827-e55e-4a81-83aa-85c0a17dfc96
+  - name: HK-vmess-hkt2.bika.hk:30251
+    cipher: auto
+    port: 30251
+    server: hkt2.bika.hk
+    tls: false
+    type: vmess
+    uuid: 9e88a10b-655c-5120-89d0-408634169561
+  - name: IE-ss-13.74.71.116:25579
+    cipher: chacha20-ietf-poly1305
+    password: 1EDLaUEHX0a0Uvyjzmwjh3
+    port: 25579
+    server: 13.74.71.116
+    type: ss
   - name: IE-trojan-52.210.45.218:22222
     password: telegram-id-privatevpns
     port: 22222
     server: 52.210.45.218
     sni: trojan.burgerip.co.uk
+    type: trojan
+  - name: IR-vmess-193.151.144.26:2083
+    cipher: auto
+    network: ws
+    port: 2083
+    server: 193.151.144.26
+    type: vmess
+    uuid: 7b33bc8f-7014-4814-afb1-1c4d7f25314c
+    ws-opts:
+      headers:
+        host: tv.filmnet.ir
+      path: /
+  - name: IT-vmess-f41.maryam1500.top:2098
+    cipher: auto
+    http-opts: {}
+    network: http
+    port: 2098
+    server: f41.maryam1500.top
+    sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    type: vmess
+    uuid: 83876222-64a4-4912-aa18-b7d9d34959de
+  - name: JP-ss-52.193.244.212:443
+    cipher: aes-256-cfb
+    password: amazonskr05
+    port: 443
+    server: 52.193.244.212
+    type: ss
+  - name: JP-trojan-central-minnow.opossum872.cfd:443
+    password: 3690911436885991424
+    port: 443
+    server: central-minnow.opossum872.cfd
+    sni: central-minnow.opossum872.cfd
     type: trojan
   - name: KR-trojan-144.24.83.39:443
     password: NISHIKUITAN222
@@ -48,7 +235,31 @@ proxies:
     server: 144.24.83.39
     skip-cert-verify: true
     type: trojan
-    udp: true
+  - name: KR-trojan-enabling-filly.opossum872.cfd:443
+    password: 3690911436885991424
+    port: 443
+    server: enabling-filly.opossum872.cfd
+    sni: enabling-filly.opossum872.cfd
+    type: trojan
+  - name: KR-vmess-45.94.68.173:40166
+    cipher: auto
+    port: 40166
+    server: 45.94.68.173
+    tls: false
+    type: vmess
+    uuid: c061522e-67dd-43b7-bd84-20ef3c954c35
+  - name: RU-vmess-185.221.160.163:443
+    cipher: auto
+    network: ws
+    port: 443
+    server: 185.221.160.163
+    tls: true
+    type: vmess
+    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+    ws-opts:
+      headers:
+        Host: worker-mute-bar-1719.nifotok993.workers.dev
+      path: /glweidf.cfd/linkws
   - name: SE-trojan-13.50.47.22:22222
     password: telegram-id-privatevpns
     port: 22222
@@ -67,6 +278,24 @@ proxies:
     server: 51.21.60.7
     sni: trojan.burgerip.co.uk
     type: trojan
+  - name: SG-ss-13.212.252.162:443
+    cipher: aes-256-cfb
+    password: amazonskr05
+    port: 443
+    server: 13.212.252.162
+    type: ss
+  - name: SG-ss-54.255.237.249:443
+    cipher: aes-256-cfb
+    password: amazonskr05
+    port: 443
+    server: 54.255.237.249
+    type: ss
+  - name: SG-trojan-easy-mako.opossum872.cfd:443
+    password: 3690911436885991424
+    port: 443
+    server: easy-mako.opossum872.cfd
+    sni: easy-mako.opossum872.cfd
+    type: trojan
   - name: TR-trojan-202.78.174.87:443
     network: tcp
     password: "3648425794742788096"
@@ -75,154 +304,108 @@ proxies:
     skip-cert-verify: true
     sni: artistic-cat.sheepdog670.boats
     type: trojan
-  - name: US-trojan-104.17.215.18:443
+  - name: TR-vmess-202.78.162.5:443
+    cipher: auto
     network: ws
-    password: 4732adfa16c6450bbef87264e41332db
     port: 443
-    server: 104.17.215.18
-    sni: jobscareerforstudent.com
-    type: trojan
-    udp: true
+    server: 202.78.162.5
+    tls: true
+    type: vmess
+    uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677
     ws-opts:
-      path: /6b777a91
-  - name: US-trojan-216.128.147.13:443
-    password: wkmY1R4EcP
-    port: 443
-    server: 216.128.147.13
-    skip-cert-verify: true
-    type: trojan
-    udp: true
-  - name: US-trojan-216.128.147.13:443
-    password: wkmY1R4EcP
-    port: 443
-    server: 216.128.147.13
-    sni: z-v2-003274.kailib.com
-    type: trojan
-    udp: true
-  - name: VN-trojan-36.50.134.29:443
-    password: 94d219c9-1afc-4d42-b090-8b3794764380
-    port: 443
-    server: 36.50.134.29
-    sni: 36.50.134.29
-    type: trojan
-  - name: GB-ss-212.102.53.198:443
-    cipher: aes-128-gcm
-    password: shadowsocks
-    port: 443
-    server: 212.102.53.198
-    type: ss
-    udp: true
-  - name: HK-ss-iepl5.forlive.live:50118
-    cipher: chacha20-ietf-poly1305
-    password: 25cb8cd7-800f-359e-81b5-a12863e2018d
-    port: 50118
-    server: iepl5.forlive.live
-    type: ss
+      headers:
+        Host: pendar.onthewifi.com
+      path: /
   - name: US-ss-139.64.165.230:5500
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
     port: 5500
     server: 139.64.165.230
     type: ss
-    udp: true
   - name: US-ss-142.202.49.119:443
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
     port: 443
     server: 142.202.49.119
     type: ss
-    udp: true
   - name: US-ss-142.202.49.119:5499
     cipher: aes-256-gcm
     password: lGqs95QkFHo2NV
     port: 5499
     server: 142.202.49.119
     type: ss
-    udp: true
   - name: US-ss-142.202.49.119:6379
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
     port: 6379
     server: 142.202.49.119
     type: ss
-    udp: true
   - name: US-ss-142.202.49.119:6679
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     port: 6679
     server: 142.202.49.119
     type: ss
-    udp: true
   - name: US-ss-142.202.49.122:8118
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
     port: 8118
     server: 142.202.49.122
     type: ss
-    udp: true
   - name: US-ss-142.202.49.122:9101
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
     port: 9101
     server: 142.202.49.122
     type: ss
-    udp: true
   - name: US-ss-142.202.49.122:9102
     cipher: aes-256-gcm
     password: e4FCWrgpkji3QY
     port: 9102
     server: 142.202.49.122
     type: ss
-    udp: true
   - name: US-ss-142.202.49.84:5003
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
     port: 5003
     server: 142.202.49.84
     type: ss
-    udp: true
   - name: US-ss-142.202.49.84:5004
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
     port: 5004
     server: 142.202.49.84
     type: ss
-    udp: true
   - name: US-ss-142.202.49.84:6679
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     port: 6679
     server: 142.202.49.84
     type: ss
-    udp: true
   - name: US-ss-142.202.49.84:8090
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
     port: 8090
     server: 142.202.49.84
     type: ss
-    udp: true
   - name: US-ss-167.88.61.235:443
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
     port: 443
     server: 167.88.61.235
     type: ss
-    udp: true
   - name: US-ss-167.88.61.235:6679
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     port: 6679
     server: 167.88.61.235
     type: ss
-    udp: true
   - name: US-ss-167.88.61.235:8882
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
     port: 8882
     server: 167.88.61.235
     type: ss
-    udp: true
   - name: US-ss-169.197.141.84:8091
     cipher: aes-256-gcm
     password: PCnnH6SQSnfoS27
@@ -234,7 +417,12 @@ proxies:
     password: Y6R9pAtvxxzmGC
     port: 9090
     server: 169.197.141.84
-    tfo: false
+    type: ss
+  - name: US-ss-169.197.141.84:9102
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+    port: 9102
+    server: 169.197.141.84
     type: ss
   - name: US-ss-169.197.142.120:5498
     cipher: aes-256-gcm
@@ -242,14 +430,12 @@ proxies:
     port: 5498
     server: 169.197.142.120
     type: ss
-    udp: true
   - name: US-ss-169.197.142.120:8882
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
     port: 8882
     server: 169.197.142.120
     type: ss
-    udp: true
   - name: US-ss-169.197.142.216:6679
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
@@ -262,13 +448,6 @@ proxies:
     port: 6697
     server: 169.197.142.216
     type: ss
-  - name: US-ss-169.197.142.216:7002
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-    port: 7002
-    server: 169.197.142.216
-    type: ss
-    udp: true
   - name: US-ss-169.197.142.216:7002
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
@@ -293,34 +472,30 @@ proxies:
     port: 2376
     server: 23.154.136.247
     type: ss
-    udp: true
+  - name: US-ss-37.19.198.244:443
+    cipher: aes-128-gcm
+    password: shadowsocks
+    port: 443
+    server: 37.19.198.244
+    type: ss
   - name: US-ss-38.110.1.12:3389
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
     port: 3389
     server: 38.110.1.12
     type: ss
-    udp: true
   - name: US-ss-38.110.1.12:8888
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
     port: 8888
     server: 38.110.1.12
     type: ss
-    udp: true
   - name: US-ss-38.143.66.87:5000
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
     port: 5000
     server: 38.143.66.87
     type: ss
-  - name: US-ss-38.75.137.105:6379
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-    port: 6379
-    server: 38.75.137.105
-    type: ss
-    udp: true
   - name: US-ss-38.75.137.105:6379
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
@@ -339,7 +514,6 @@ proxies:
     port: 8119
     server: 38.75.137.105
     type: ss
-    udp: true
   - name: US-ss-38.86.135.141:8882
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
@@ -351,21 +525,24 @@ proxies:
     password: 1RWwXhwfAB5gAEozU4G2Pg
     port: 8080
     server: 45.87.175.164
-    tfo: false
     type: ss
   - name: US-ss-45.87.175.166:8080
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
     port: 8080
     server: 45.87.175.166
-    tfo: false
     type: ss
   - name: US-ss-45.87.175.192:8080
     cipher: chacha20-ietf-poly1305
     password: 1RWwXhwfAB5gAEozU4G2Pg
     port: 8080
     server: 45.87.175.192
-    tfo: false
+    type: ss
+  - name: US-ss-45.87.175.199:8080
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+    port: 8080
+    server: 45.87.175.199
     type: ss
   - name: US-ss-69.50.92.110:8118
     cipher: aes-256-gcm
@@ -373,207 +550,80 @@ proxies:
     port: 8118
     server: 69.50.92.110
     type: ss
-    udp: true
   - name: US-ss-69.50.92.55:7307
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
     port: 7307
     server: 69.50.92.55
     type: ss
-    udp: true
   - name: US-ss-69.50.92.72:6679
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     port: 6679
     server: 69.50.92.72
     type: ss
-    udp: true
   - name: US-ss-69.50.92.99:8882
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
     port: 8882
     server: 69.50.92.99
     type: ss
-    udp: true
   - name: US-ss-69.50.95.179:8882
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
     port: 8882
     server: 69.50.95.179
     type: ss
-    udp: true
   - name: US-ss-69.50.95.53:6379
     cipher: aes-256-gcm
     password: zDNVedRFPQexG9v
     port: 6379
     server: 69.50.95.53
     type: ss
-    udp: true
   - name: US-ss-69.50.95.53:6697
     cipher: aes-256-gcm
     password: TEzjfAYq2IjtuoS
     port: 6697
     server: 69.50.95.53
     type: ss
-    udp: true
   - name: US-ss-69.50.95.53:8881
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
     port: 8881
     server: 69.50.95.53
     type: ss
-    udp: true
   - name: US-ss-69.50.95.53:8882
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
     port: 8882
     server: 69.50.95.53
     type: ss
-    udp: true
-
-  - name: CA-vmess-russia.com:2082
-    cipher: auto
+  - name: US-trojan-104.17.215.18:443
     network: ws
-    port: 2082
-    server: russia.com
-    sni: ip18.6929198.xyz
-    type: vmess
-    udp: true
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        host: ip18.6929198.xyz
-      path: /github.com/Alvin9999
-  - name: CA-vmess-russia.com:2082
-    cipher: auto
-    network: ws
-    port: 2082
-    server: russia.com
-    sni: ip18.6929198.xyz
-    type: vmess
-    uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
-    ws-opts:
-      headers:
-        host: ip18.6929198.xyz
-      path: /github.com/Alvin9999
-  - name: DE-vmess-23.157.88.6:443
-    alterId: 1
-    cipher: auto
-    network: ws
+    password: 4732adfa16c6450bbef87264e41332db
     port: 443
-    server: 23.157.88.6
-    servername: 23.157.88.6
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    server: 104.17.215.18
+    sni: jobscareerforstudent.com
+    type: trojan
     ws-opts:
-      headers:
-        Host: 23.157.88.6
-      path: linkvws
-  - name: DE-vmess-23.158.56.39:443
-    alterId: 1
-    cipher: auto
-    network: ws
+      path: /6b777a91
+  - name: US-trojan-216.128.147.13:443
+    password: wkmY1R4EcP
     port: 443
-    server: 23.158.56.39
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    ws-opts:
-      headers:
-        Host: 23.158.56.39
-      path: linkvws
-  - name: FR-vmess-162.19.25.207:44513
-    cipher: auto
-    network: tcp
-    port: 44513
-    server: 162.19.25.207
-    type: vmess
-    uuid: 4552bdb6-e008-43ac-926d-c6c6c5a6fc76
-  - name: FR-vmess-23.162.152.177:443
-    alterId: 1
-    cipher: auto
-    network: ws
+    server: 216.128.147.13
+    skip-cert-verify: true
+    type: trojan
+  - name: US-trojan-216.128.147.13:443
+    password: wkmY1R4EcP
     port: 443
-    server: 23.162.152.177
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    ws-opts:
-      headers:
-        Host: 23.162.152.177
-      path: linkvws
-  - name: GB-vmess-149.7.16.194:443
-    alterId: 1
-    cipher: auto
-    network: ws
-    port: 443
-    server: 149.7.16.194
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    ws-opts:
-      headers:
-        Host: 149.7.16.194
-      path: /linkvws
-  - name: IR-vmess-193.151.144.26:2083
-    cipher: auto
-    network: ws
-    port: 2083
-    server: 193.151.144.26
-    type: vmess
-    udp: true
-    uuid: 7b33bc8f-7014-4814-afb1-1c4d7f25314c
-    ws-opts:
-      headers:
-        host: tv.filmnet.ir
-      path: /
-  - name: IT-vmess-f41.maryam1500.top:2098
-    cipher: auto
-    http-opts: {}
-    network: http
-    port: 2098
-    server: f41.maryam1500.top
-    sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    type: vmess
-    udp: true
-    uuid: 83876222-64a4-4912-aa18-b7d9d34959de
-  - name: RU-vmess-185.221.160.163:443
-    cipher: auto
-    network: ws
-    port: 443
-    server: 185.221.160.163
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
-    ws-opts:
-      headers:
-        Host: worker-mute-bar-1719.nifotok993.workers.dev
-      path: /glweidf.cfd/linkws
-  - name: TR-vmess-202.78.162.5:443
-    cipher: auto
-    network: ws
-    port: 443
-    server: 202.78.162.5
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677
-    ws-opts:
-      headers:
-        Host: pendar.onthewifi.com
-      path: /
+    server: 216.128.147.13
+    sni: z-v2-003274.kailib.com
+    type: trojan
   - name: US-vmess-104.16.60.8:2086
     cipher: auto
     network: ws
     port: 2086
     server: 104.16.60.8
-    tfo: false
     tls: false
     type: vmess
     uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
@@ -586,7 +636,6 @@ proxies:
     network: ws
     port: 2052
     server: 104.16.67.38
-    tfo: false
     tls: false
     type: vmess
     uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
@@ -599,7 +648,6 @@ proxies:
     network: ws
     port: 2086
     server: 104.16.68.38
-    tfo: false
     tls: false
     type: vmess
     uuid: a1655f51-1e20-4a92-8a11-b7ca30a7a353
@@ -612,7 +660,6 @@ proxies:
     network: ws
     port: 2095
     server: 104.18.57.111
-    tfo: false
     tls: false
     type: vmess
     uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
@@ -625,7 +672,6 @@ proxies:
     network: ws
     port: 2082
     server: 104.19.21.71
-    tfo: false
     tls: false
     type: vmess
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
@@ -638,7 +684,6 @@ proxies:
     network: ws
     port: 2082
     server: 104.19.45.90
-    tfo: false
     tls: false
     type: vmess
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
@@ -651,7 +696,6 @@ proxies:
     network: ws
     port: 2082
     server: 104.19.47.65
-    tfo: false
     tls: false
     type: vmess
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
@@ -664,7 +708,6 @@ proxies:
     network: ws
     port: 2082
     server: 104.19.57.4
-    tfo: false
     tls: false
     type: vmess
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
@@ -677,7 +720,6 @@ proxies:
     network: ws
     port: 2095
     server: 104.19.57.4
-    tfo: false
     tls: false
     type: vmess
     uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
@@ -690,7 +732,6 @@ proxies:
     network: ws
     port: 2095
     server: 104.20.25.146
-    tfo: false
     tls: false
     type: vmess
     uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
@@ -703,7 +744,6 @@ proxies:
     network: ws
     port: 2082
     server: 104.21.8.157
-    tfo: false
     tls: false
     type: vmess
     uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
@@ -717,7 +757,6 @@ proxies:
     network: ws
     port: 38007
     server: 142.4.108.139
-    tfo: false
     tls: true
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -730,7 +769,6 @@ proxies:
     network: ws
     port: 80
     server: 151.101.2.133
-    tfo: false
     tls: false
     type: vmess
     uuid: a888b89a-08ac-40e6-8ad7-cfce9569f967
@@ -744,7 +782,6 @@ proxies:
     port: 80
     server: 162.159.136.98
     type: vmess
-    udp: true
     uuid: 5820093a-bb7d-4e15-8575-1a529f2d8282
     ws-opts:
       headers:
@@ -755,7 +792,6 @@ proxies:
     network: ws
     port: 2095
     server: 162.159.140.33
-    tfo: false
     tls: false
     type: vmess
     uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
@@ -768,7 +804,6 @@ proxies:
     network: ws
     port: 2082
     server: 162.159.140.56
-    tfo: false
     tls: false
     type: vmess
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
@@ -781,7 +816,6 @@ proxies:
     network: ws
     port: 2095
     server: 162.159.140.56
-    tfo: false
     tls: false
     type: vmess
     uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
@@ -794,7 +828,6 @@ proxies:
     network: ws
     port: 2095
     server: 172.64.166.16
-    tfo: false
     tls: false
     type: vmess
     uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
@@ -809,7 +842,6 @@ proxies:
     server: 172.64.166.2
     sni: ip18.6929198.xyz
     type: vmess
-    udp: true
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
     ws-opts:
       headers:
@@ -820,7 +852,6 @@ proxies:
     network: ws
     port: 2082
     server: 172.64.167.19
-    tfo: false
     tls: false
     type: vmess
     uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
@@ -833,7 +864,6 @@ proxies:
     network: ws
     port: 443
     server: 188.114.97.21
-    tfo: false
     tls: true
     type: vmess
     uuid: f584de15-2034-4170-a723-f48c2bae5e0f
@@ -846,7 +876,6 @@ proxies:
     cipher: auto
     port: 41400
     server: 198.2.218.100
-    tfo: false
     tls: false
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -855,7 +884,6 @@ proxies:
     network: ws
     port: 443
     server: 38.91.106.227
-    tfo: false
     tls: true
     type: vmess
     uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -863,34 +891,6 @@ proxies:
       headers:
         Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
       path: /linkvws
-  - name: US-vmess-d.jembat.homes:443
-    alterId: 1
-    cipher: auto
-    network: ws
-    port: 443
-    server: d.jembat.homes
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    ws-opts:
-      headers:
-        Host: d.jembat.homes
-      path: /
-  - name: US-vmess-p.valkinin.org:443
-    alterId: 1
-    cipher: auto
-    network: ws
-    port: 443
-    server: p.valkinin.org
-    tfo: false
-    tls: true
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    ws-opts:
-      headers:
-        Host: p.valkinin.org
-      path: linkvws
   - name: US-vmess-russia.com:2082
     cipher: auto
     network: ws
@@ -903,3 +903,9 @@ proxies:
       headers:
         host: ip18.6929198.xyz
       path: /github.com/Alvin9999
+  - name: VN-trojan-36.50.134.29:443
+    password: 94d219c9-1afc-4d42-b090-8b3794764380
+    port: 443
+    server: 36.50.134.29
+    sni: 36.50.134.29
+    type: trojan
